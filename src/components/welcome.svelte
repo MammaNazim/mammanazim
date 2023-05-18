@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-    
+	import { fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 
-	let currentIndex = 0;
+	let visible = false
+let currentIndex = 0;
 	let currentString = '';
 
-	const stringsArray = ['programmer', 'freelancer', 'cat lover', 'fitness enthusiast', 'gamer'];
+	const stringsArray = [ 'programmer', 'freelancer', 'cat lover', 'nerd',];
 
 	function changeString() {
 		currentString = stringsArray[currentIndex];
@@ -13,24 +15,56 @@
 	}
 
 	onMount(() => {
-		const interval = setInterval(changeString, 3000);
+		visible = true
+		const interval = setInterval(changeString, 2000);
 
 		return () => {
 			clearInterval(interval);
 		};
 	});
 
-    
 </script>
-<main class="h-screen flex ">
-<div class="h-4/6 flex border-y-black border my-auto w-full justify-start items-center ">
-	<div class="   h-full flex justify-evenly  flex-col">
-		<div class=" text-xl">
-			Hello, im <span>Mamma Nazim</span>
-		</div>
-		<div>
-			im a <span>{currentString}</span>
+
+<main class=" w-full mx-auto">
+	{#if visible}
+		
+	
+	<div transition:fade={{  duration: 1000 }} class="h-screen  flex flex-col justify-center">
+		<img
+			src="https://drive.google.com/uc?export=download&id=19JfsejCScqvw7KlqjUF0mAjQKXBN4XVX"
+			class=" mx-auto sm:mr-auto sm:ml-8   w-36"
+			alt=""
+		/>
+		<div  class="mx-auto sm:mr-auto sm:ml-8 px-10 flex bg-blue-200 shadow-lg shadow-neutral-700  border-x-4 border-y-2 border-gray-800 justify-start items-center">
+			<div class=" px-auto py-10 h-full flex justify-evenly flex-col">
+				<span class="text-4xl font-light py-10">
+					Hello, my name is
+				</span>
+				<span class="retro-button font-bold text-xl bg-yellow-200  border-black ">
+					MAMMA NAZIM</span>
+				<span class="text-4xl font-light py-10">
+					And
+				</span>
+				<div class="retro-button font-light bg-yellow-200 flex  text-sm  mb-12">
+					I'm a
+					{#key currentString}
+					<div
+							class="absolute  pl-20"
+							in:fly={{ y: -20, duration: 500 }}
+							out:fly={{ y: 20, duration: 500 }}
+						>
+							{currentString}
+						</div>
+						
+					{/key}
+					
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+	{/if}
 </main>
+<style>
+
+
+</style>

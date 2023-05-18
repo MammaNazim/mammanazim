@@ -1,22 +1,15 @@
 <script>
     import "../app.css";
-    
+    import Header from "../components/header.svelte";  
   </script>
-  <header class=" z-50 fixed w-screen bg-black py-4 px-6">
-    <div class="container mx-auto flex justify-between items-center">
-    </div>
-  </header>
-<main>
+  
+ <Header/>
+<main class=" ">
   
   <slot />
 
 </main>
 
 <style>
-main{
-  
-  margin-right :1rem ;
-  margin-left :1rem ;
 
-}
 </style>
