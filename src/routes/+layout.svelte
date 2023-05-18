@@ -3,9 +3,9 @@
     import Header from "../components/header.svelte";  
   </script>
   
- <Header/>
-<main class=" ">
-  
+<main class=" bg-gray-100 ">
+   <Header/>
+
   <slot />
 
 </main>
