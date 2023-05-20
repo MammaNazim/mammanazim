@@ -55,7 +55,7 @@
 								<div class="px-auto py-4 h-full flex justify-evenly flex-col">
 									<span class="text-4xl font-light py-6"> Hello, my name is </span>
 									<span class="retro-button font-bold text-xl bg-yellow-200 border-black">
-										BRUH JAWNe</span
+										MAMMA NAZIM</span
 									>
 									<span class="text-4xl font-light py-6"> And </span>
 									<div class="retro-button font-light pb-6 bg-yellow-200 flex text-sm mb-6">
