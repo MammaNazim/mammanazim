@@ -4,6 +4,11 @@
 
 body {
 	font-family: 'Roboto Condensed', sans-serif;
+  
+}
+html {
+  scroll-behavior: smooth;
+
 }
 
 .retro-button {
@@ -14,6 +19,10 @@ body {
 	border-color: rgb(0 0 0 / var(--tw-border-opacity));
 	font-family: 'Press Start 2P', cursive;
 }
+.retro{
+  font-family: 'Press Start 2P', cursive;
+
+}
 .retro-clickable {
 	box-shadow: 3px 3px black, 5px 5px #404040;
 	background-color: #fbcfe8;
@@ -23,3 +32,33 @@ body {
 	box-shadow: 0px 0px #404040;
 	transform: translateX(5px) translateY(2px);
 }
+  .rainbow {
+    animation: rainbowAnimation 1s infinite;
+  }
+
+  @keyframes rainbowAnimation {
+    0% {
+      color: red;
+    }
+    14% {
+      color: orange;
+    }
+    28% {
+      color: yellow;
+    }
+    42% {
+      color: green;
+    }
+    57% {
+      color: blue;
+    }
+    71% {
+      color: indigo;
+    }
+    85% {
+      color: violet;
+    }
+    100% {
+      color: red;
+    }
+  }
