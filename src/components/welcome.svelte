@@ -43,14 +43,17 @@
 
 <main class="w-full mx-auto">
 	{#if visible}
-		<div transition:fade={{ duration: 1000 }} class="">
-			<div class="flex h-full flex-col justify-center md:h-screen">
+		<div class="">
+			<div class="parent-div flex flex-col justify-center h-ful md:h-screen pt-14 md:pt-0">
 				<div class="main-div flex flex-col">
 					<div class="flex flex-wrap md:gap-12 gap-y-44 justify-center items-end">
-						<div class="md:h-full my-auto flex justify-center flex-col h-screen">
+						<div
+							transition:fly={{ delay: 100, y: -100, duration: 2000 }}
+							class=" my-auto flex justify-center flex-col md:max-h-screen"
+						>
 							<img src="src/images/orange-cat2.gif" class="w-36" alt="" />
 							<div
-								class=" px-10 flex bg-blue-200 shadow-lg shadow-neutral-700 border-x-4 border-y-2 border-gray-800 h-80"
+								class="  px-10 flex bg-blue-200 shadow-lg shadow-neutral-700 border-x-4 border-y-2 border-gray-800 h-80"
 							>
 								<div class="px-auto py-4 h-full flex justify-evenly flex-col">
 									<span class="text-4xl font-light py-6"> Hello, my name is </span>
@@ -73,7 +76,11 @@
 								</div>
 							</div>
 						</div>
-						<div class="md:h-full h-screen flex justify-center flex-col">
+
+						<div
+							transition:fly={{ delay: 1000, y: 100, duration: 2000 }}
+							class=" my-40 mx-4 md:max-h-screen flex justify-center flex-col"
+						>
 							<div
 								class="skills px-10 grid grid-rows-4 bg-blue-200 shadow-lg shadow-neutral-700 border-x-4 border-y-2 border-gray-800"
 							>
@@ -81,7 +88,9 @@
 									<span class="text-3xl font-light my-2 table">
 										Technologies used<strong>:</strong></span
 									>
-									<div class="retro-button bg-yellow-200 grid-element grid grid-cols-4 gap-x-2">
+									<div
+										class="retro-button bg-yellow-200 grid-element grid grid-cols-2 sm:grid-cols-4 gap-x-2"
+									>
 										<div class="transition-all hover:text-orange-500 skill-individual">
 											<img class="skill-img mx-auto" src="src/images/svelte.png" alt="" />
 											<div class=" font-bold text-center">Svelte</div>
@@ -94,9 +103,9 @@
 											<img class="skill-img mx-auto" src="src/images/tailwindcss.png" alt="" />
 											<div class=" font-bold text-center">Tailwind</div>
 										</div>
-										<div class="transition-all hover:text-yellow-500 skill-individual">
-											<img class="skill-img mx-auto" src="src/images/python.png" alt="" />
-											<div class=" font-bold text-center">Python</div>
+										<div class="transition-all hover:text-orange-500 skill-individual">
+											<img class="skill-img mx-auto" src="src/images/git.png" alt="" />
+											<div class=" font-bold text-center">Git</div>
 										</div>
 									</div>
 								</div>
@@ -104,11 +113,11 @@
 									<div class="">
 										{#if isActive}
 											<div
-												class="w-80 silly-text retro mx-auto text-center"
+												class="sm:w-80 w-48 retro sm:text-base text-xs mx-auto text-center"
 												in:fly={{ duration: 300, y: 85 }}
 											>
 												i can bring your website ideas to <div
-													class="pb-6 mt-9 rainbow"
+													class="sm:pb-6 pb-2 sm:mt-9 mt-3 rainbow"
 													in:fade={{ delay: 1000, duration: 300 }}
 												>
 													LIFE
@@ -164,7 +173,7 @@
 				</div>
 				<div class="flex arrow-div my-6">
 					<a
-						href="/"
+						href="#about"
 						class="retro-button retro-clickable w-24 h-24 rounded-full mx-auto border-4 border-black"
 					>
 						<img src="src/images/arrow.png" alt="down arrow" class="arrow" />
@@ -176,16 +185,20 @@
 </main>
 
 <style>
+	@media (max-width: 768px) {
+		.parent-div {
+			padding-top: 25vh;
+		}
+	}
 	@media screen and (min-height: 850px) {
 		.main-div {
 			margin-top: auto;
 			margin-bottom: auto;
-			
 		}
-	}	
+	}
 	@media screen and (max-width: 839px) {
 		.arrow-div {
-	display: none;	
+			display: none;
 		}
 	}
 	.arrow {
@@ -195,8 +208,6 @@
 		margin-top: auto;
 	}
 
-	.silly-text {
-	}
 	.skills {
 		height: 27rem;
 	}
@@ -236,5 +247,13 @@
 	}
 	svg.active {
 		animation: jump 0.4s;
+	}
+	@keyframes -global-fade-in {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
 	}
 </style>
