@@ -36,6 +36,8 @@ html {
     animation: rainbowAnimation 1s infinite;
   }
 
+ 
+
   @keyframes rainbowAnimation {
     0% {
       color: red;

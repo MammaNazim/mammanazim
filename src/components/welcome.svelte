@@ -44,7 +44,7 @@
 <main class="w-full mx-auto">
 	{#if visible}
 		<div class="">
-			<div class="parent-div flex flex-col justify-center h-ful md:h-screen pt-14 md:pt-0">
+			<div class="parent-div flex flex-col justify-center  md:h-screen pt-14 md:pt-0">
 				<div class="main-div flex flex-col">
 					<div class="flex flex-wrap md:gap-12 gap-y-44 justify-center items-end">
 						<div
@@ -248,12 +248,5 @@
 	svg.active {
 		animation: jump 0.4s;
 	}
-	@keyframes -global-fade-in {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
+
 </style>
