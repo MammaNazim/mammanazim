@@ -2,7 +2,14 @@
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { fade } from 'svelte/transition';
-
+	
+	import orangeCat from "$lib/images/orangecat.gif"
+	import svelte from "$lib/images/svelte.png"
+	import tailwind from "$lib/images/tailwindcss.png"
+	import typescript from "$lib/images/typescript.png"
+	import git from "$lib/images/git.png"
+	import arrow from "$lib/images/arrow.png"
+	
 	let visible = false;
 	let currentIndex = 0;
 	let currentString = '';
@@ -10,7 +17,7 @@
 	let isActive = false;
 
 	const stringsArray = ['programmer', 'freelancer', 'cat lover', 'nerd'];
-
+	
 	function changeString() {
 		currentString = stringsArray[currentIndex];
 		currentIndex = (currentIndex + 1) % stringsArray.length;
@@ -42,16 +49,16 @@
 </script>
 
 <main class="w-full mx-auto">
+				<div class="parent-div flex flex-col justify-center  md:h-screen pt-14 md:pt-0">
+
 	{#if visible}
-		<div class="">
-			<div class="parent-div flex flex-col justify-center  md:h-screen pt-14 md:pt-0">
 				<div class="main-div flex flex-col">
 					<div class="flex flex-wrap md:gap-12 gap-y-44 justify-center items-end">
 						<div
 							transition:fly={{ delay: 100, y: -100, duration: 2000 }}
 							class=" my-auto flex justify-center flex-col md:max-h-screen"
 						>
-							<img src="src/images/orange-cat2.gif" class="w-36" alt="" />
+							<img src={orangeCat} class="w-36" alt="orang" />
 							<div
 								class="  px-10 flex bg-blue-200 shadow-lg shadow-neutral-700 border-x-4 border-y-2 border-gray-800 h-80"
 							>
@@ -92,19 +99,19 @@
 										class="retro-button bg-yellow-200 grid-element grid grid-cols-2 sm:grid-cols-4 gap-x-2"
 									>
 										<div class="transition-all hover:text-orange-500 skill-individual">
-											<img class="skill-img mx-auto" src="src/images/svelte.png" alt="" />
+											<img class="skill-img mx-auto" src={svelte} alt="" />
 											<div class=" font-bold text-center">Svelte</div>
 										</div>
 										<div class="transition-all hover:text-blue-500 skill-individual">
-											<img class="skill-img mx-auto" src="src/images/typescript.png" alt="" />
+											<img class="skill-img mx-auto" src={typescript} alt="" />
 											<div class=" font-bold text-center">Typescript</div>
 										</div>
 										<div class="transition-all hover:text-cyan-400 skill-individual">
-											<img class="skill-img mx-auto" src="src/images/tailwindcss.png" alt="" />
+											<img class="skill-img mx-auto" src={tailwind} alt="" />
 											<div class=" font-bold text-center">Tailwind</div>
 										</div>
 										<div class="transition-all hover:text-orange-500 skill-individual">
-											<img class="skill-img mx-auto" src="src/images/git.png" alt="" />
+											<img class="skill-img mx-auto" src={git} alt="" />
 											<div class=" font-bold text-center">Git</div>
 										</div>
 									</div>
@@ -176,12 +183,12 @@
 						href="#about"
 						class="retro-button retro-clickable w-24 h-24 rounded-full mx-auto border-4 border-black"
 					>
-						<img src="src/images/arrow.png" alt="down arrow" class="arrow" />
+						<img src={arrow} alt="down arrow" class="arrow" />
 					</a>
 				</div>
-			</div>
+	{/if}	
 		</div>
-	{/if}
+
 </main>
 
 <style>

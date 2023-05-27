@@ -1,4 +1,8 @@
 <script lang="ts">
+	import folder from "$lib/images/folder.png"
+	import folderOpen from "$lib/images/folder-open.png"
+
+
 	let path = 'home';
 	function home() {
 		path = 'home';
@@ -25,7 +29,7 @@
 					href="/"
 					class="retro-button clicked retro-clickable text-center flex items-center"
 				>
-					<img src="src/images/folder-open.png" class="image h-6 w-6 mr-2" alt="" />
+					<img src={folderOpen} class="image h-6 w-6 mr-2" alt="" />
 					<span>Home</span>
 				</a>
 			{:else}
@@ -34,7 +38,7 @@
 					href="/"
 					class="retro-button retro-clickable text-center flex items-center"
 				>
-					<img src="src/images/folder.png" class="image h-6 w-6 mr-2" alt="" />
+					<img src={folder} class="image h-6 w-6 mr-2" alt="" />
 					<span>Home</span>
 				</a>
 			{/if}
@@ -46,7 +50,7 @@
 					href="#about"
 					class="retro-button clicked retro-clickable text-center flex items-center"
 				>
-					<img src="src/images/folder-open.png" class="image h-6 w-6 mr-2" alt="" />
+					<img src={folderOpen} class="image h-6 w-6 mr-2" alt="" />
 					<span>About me</span></a
 				>
 			{:else}
@@ -55,7 +59,7 @@
 					href="#about"
 					class="retro-button retro-clickable text-center flex items-center"
 				>
-					<img src="src/images/folder.png" class="image h-6 w-6 mr-2" alt="" />
+					<img src={folder} class="image h-6 w-6 mr-2" alt="" />
 					<span>About me</span></a
 				>
 			{/if}
@@ -65,7 +69,7 @@
 					href="#projects"
 					class="retro-button clicked retro-clickable text-center flex items-center"
 				>
-					<img src="src/images/folder-open.png" class="image h-6 w-6 mr-2" alt="" />
+					<img src={folderOpen} class="image h-6 w-6 mr-2" alt="" />
 					<span>Projects</span></a
 				>
 			{:else}
@@ -74,7 +78,7 @@
 					href="#projects"
 					class="retro-button retro-clickable flex items-center"
 				>
-					<img src="src/images/folder.png" class="image h-6 w-6 mr-2" alt="" />
+					<img src={folder} class="image h-6 w-6 mr-2" alt="" />
 					<span>Projects</span></a
 				>
 			{/if}
@@ -84,7 +88,7 @@
 					href="#contact"
 					class="retro-button clicked retro-clickable text-center flex items-center"
 				>
-					<img src="src/images/folder-open.png" class="image h-6 w-6 mr-2" alt="" />
+					<img src={folderOpen} class="image h-6 w-6 mr-2" alt="" />
 					<span>Contact</span></a
 				>
 			{:else}
@@ -93,7 +97,7 @@
 					href="#contact"
 					class="retro-button retro-clickable flex items-center"
 				>
-					<img src="src/images/folder.png" class="image h-6 w-6 mr-2" alt="" />
+					<img src={folder} class="image h-6 w-6 mr-2" alt="" />
 					<span>Contact</span></a
 				>
 			{/if}
