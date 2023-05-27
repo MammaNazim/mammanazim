@@ -49,14 +49,14 @@
 </script>
 
 <main class="w-full mx-auto">
-				<div class="parent-div flex flex-col justify-center  md:h-screen pt-14 md:pt-0">
+				<div class="parent-div flex flex-col justify-center lg:h-screen  pt-14 ">
 
 	{#if visible}
 				<div class="main-div flex flex-col">
-					<div class="flex flex-wrap md:gap-12 gap-y-44 justify-center items-end">
+					<div class="flex flex-wrap lg:gap-12 gap-y-44  justify-center items-end first-card">
 						<div
 							transition:fly={{ delay: 100, y: -100, duration: 2000 }}
-							class=" my-auto flex justify-center flex-col md:max-h-screen"
+							class=" my-auto flex justify-center flex-col lg:max-h-screen"
 						>
 							<img src={orangeCat} class="w-36" alt="orang" />
 							<div
@@ -192,7 +192,7 @@
 </main>
 
 <style>
-	@media (max-width: 768px) {
+	@media (max-width: 850px) {
 		.parent-div {
 			padding-top: 25vh;
 		}
@@ -207,7 +207,9 @@
 		.arrow-div {
 			display: none;
 		}
+
 	}
+
 	.arrow {
 		transform: scale(1.5);
 	}

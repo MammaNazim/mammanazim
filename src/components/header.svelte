@@ -129,7 +129,7 @@
 			font-size: 80%;
 		}
 	}
-	@media (max-width: 768px) {
+	@media (max-width: 600px) {
 		.image {
 			display: none;
 		}
