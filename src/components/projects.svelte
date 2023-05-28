@@ -9,10 +9,10 @@
 	let projects = [
 		{
 			title: 'Gymforce',
-			description: 'The gym website is a visually captivating platform designed to inspire fitness enthusiasts. It offers a seamless browsing experience. With its sleek design and responsive layout, users can easily navigate and schedule workouts across devices.',
+			description: 'Gymforce is a visually captivating website designed to inspire fitness enthusiasts. It offers a great browsing experience. With its sleek design and responsive layout, users can easily navigate and schedule workouts across devices.',
 			thumbnail: gymthumbnail,
-			demoLink: 'https://example.com/demo1',
-			codeLink: 'https://github.com/your-username/project1'
+			demoLink: 'https://gymforce.vercel.app/',
+			codeLink: 'https://github.com/MammaNazim/gymforce'
 		},
 
 	];
